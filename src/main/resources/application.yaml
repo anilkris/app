@@ -1,0 +1,24 @@
+spring:
+  liquibase:
+    contexts: all,loadUser
+    change-log: classpath:db/db.changelog-master.xml
+    url: jdbc:postgresql://localhost:8432/mydb
+    parameters:
+      admin:
+        username: certs_admin
+      user:
+        username: certs_user
+        password: Password1
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:8432/mydb
+    username: certs_admin
+    password: Password1
+  
+logging:
+  level:
+    root: info
+ 
