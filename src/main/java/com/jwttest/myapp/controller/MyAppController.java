@@ -17,6 +17,7 @@ public class MyAppController {
 	public @ResponseBody ResponseEntity < String > getCert() {
         return new ResponseEntity < String > ("Response from GET", HttpStatus.OK);
     }
+
 	
 	@PostMapping("/cert/add")
 	public @ResponseBody ResponseEntity < String > addCert() {
